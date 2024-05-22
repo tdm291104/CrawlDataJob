@@ -70,6 +70,23 @@ def get_CompanyReview_24(source):
     div = source.find('div', class_ = 'max-h-[84px] overflow-hidden mt-4 text-14 text-se-neutral-84 mb-2')
     return div.get_text(' ', strip=True)
 
+def get_CompanyinfoPalce_24(soure):
+    div = soure.find_all('div', class_ = 'max-w-[68%] text-se-neutral-100-n font-light sm:max-w-[68%] md:max-w-[70%] lg:max-w-[76%]')
+    return div[0].get_text(' ', strip=True)
+
+def get_CompanyinfoQuyMO_24(soure):
+    div = soure.find_all('div', class_ = 'max-w-[68%] text-se-neutral-100-n font-light sm:max-w-[68%] md:max-w-[70%] lg:max-w-[76%]')
+    return div[1].get_text(' ', strip=True)
+
+def get_CompanyindoGT_24(soure):
+    div =  soure.find('div', class_ = 'mb-12 px-4 sm:px-0')
+    divs = div.find_all('div', class_ = 'text-base break-words text-se-neutral-80 font-light BoxIntroduction_contentIntroductionShow__c7ck2')
+    return divs[0].get_text(' ', strip = True)
+
+def get_CompanyinfoName_24(soure):
+    div = soure.find('div', class_ = 'text-center mb-2 max-w-[99%] xs:max-w-full sm:text-left sm:max-w-[85%]')
+    return div.get_text(' ', strip=True)
+
 
 
     

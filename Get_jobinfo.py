@@ -61,7 +61,7 @@ def get_vieclam24(driver):
         data = []
         for i in profile_urls:
             info = get_profile_info_24(driver, i)
-            print('>> Vieclam24:', info)
+            print('>> Vieclam24_JOB:', info)
             if info:
                 data.append(info)
         return data
